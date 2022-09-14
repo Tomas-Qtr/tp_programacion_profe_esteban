@@ -1,0 +1,23 @@
+::ng-deep{
+    .p-menubar{
+        background: transparent;
+        border: none;
+        border-radius: 0;
+        position: sticky;
+        position: -webkit-sticky;
+        z-index: 100;
+        position: fixed;
+        width: 100%;
+        padding-left: 2.5em ;
+        padding-right: 2em ;
+    }
+
+    .p-menubar .p-menubar-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled) .p-menuitem-text{
+        color: #ffbe00;
+    }
+
+    .p-component.abajo{
+        background-color: #ffbe00;
+        transition: 0.4s;
+    }
+}
