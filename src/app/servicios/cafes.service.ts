@@ -13,14 +13,14 @@ export class CafesService {
 
 private colleccionCafes: AngularFirestoreCollection<Cafe>;
 
-getProducto(){
-  return this.colleccionCafes.stateChanges().
-  pipe(map(action=>action.map(a=>a.payload.doc.data())))
-}
+  getCafe(){
+    return this.colleccionCafes.stateChanges().
+    pipe(map(action=>action.map(a=>a.payload.doc.data())))
+  }
 
 
   constructor(private db:AngularFirestore) {
-      this.colleccionCafes= db.collection('Cafe')
+      this.colleccionCafes= db.collection('cafes')
   }
 
 
@@ -42,11 +42,21 @@ getProducto(){
 
   }
 
-editarCafe(idcafe:string, nuevosDatos:Cafe){
-  return this.colleccionCafes.doc(idcafe).update(nuevosDatos)
-}
+  editarCafe(idcafe:string, nuevosDatos:Cafe){
+    return this.colleccionCafes.doc(idcafe).update(nuevosDatos)
+  }
 
-
+  deleteCafe(idcafe:string){
+    return new Promise((resolve, rejects)=>{
+      try{
+        const res = this.colleccionCafes.doc(idcafe).delete()
+        resolve(res)
+      }
+      catch(error){
+        rejects(error)
+      }
+    })
+  }
 
 
 
