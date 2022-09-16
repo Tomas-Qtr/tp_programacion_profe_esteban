@@ -1,14 +1,5 @@
-.galeria-img{
+img{
     object-fit: cover;
-   // background-image: url(https://i.blogs.es/4b8bd4/pokemoncafemix/1366_2000.jpeg);
-   max-width: 100vw;
-}
-.galeria-img-2{
-    object-fit: cover;
-    align-items: center;
-    background-image: url(https://i.pinimg.com/originals/ac/b2/ae/acb2ae6b07f31b4852607a96ff3c0f99.jpg);
-}
-*{
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    height: 40em;
 }

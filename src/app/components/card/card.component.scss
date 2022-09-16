@@ -1,3 +1,8 @@
+::ng-deep{
+    .p-carousel{
+    width: 100vw;
+}
+}
 .carta{
     width: 350px;
     padding: 8px 8px;
@@ -10,6 +15,7 @@
    text-align: center;
   }
   h5{
+    color: #000;
     font-size: 1.2em;
     margin: 0;
   }
@@ -34,3 +40,5 @@
     font-weight: 900;
     font-size: 1.1em;
   }
+
+

@@ -1,4 +1,4 @@
-<div class="grid grid-nogutter">
+<!-- <div class="grid grid-nogutter">
     <div class="col-3 p-3" *ngFor="let noticia of news">
         <p-card class=" m-2" header="{{noticia.titulo}}"
             [style]="{width: '360px'}" styleClass="p-card-shadow">
@@ -8,4 +8,22 @@
             <p>{{noticia.descripcion}}</p>
         </p-card>
     </div>
-</div> 
+</div>  -->
+
+<div class="grid grid-nogutter">
+    <div class="col-3 p-3 " *ngFor="let noticia of news">
+        <div class="carta">
+            <img src="{{noticia.imagen}}" class="imagen" alt="">
+            <div class="cafe">
+              
+             
+              <div class="noticia">
+                <h5>{{noticia.titulo}}</h5>
+                <p class="descripcion">{{noticia.descripcion}}</p>
+                <button class="boton">Leer más</button>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+

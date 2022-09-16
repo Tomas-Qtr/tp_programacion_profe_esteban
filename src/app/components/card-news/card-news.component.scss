@@ -1,0 +1,46 @@
+.carta{
+    width: 300px;
+    padding: 8px 8px;
+    border: 2px rgba(204, 204, 204, 0.5) solid;
+    border-radius: 30px;
+  }
+  
+  .cafe{
+   margin: 0 5px;
+   text-align: start;
+  }
+  h5{
+    font-size: 1.2em;
+    margin: 10px 0;
+    
+  }
+  .imagen{
+    object-fit: cover;
+    border-radius: 20px;
+    width: 100%;
+    height: 200px;
+  }
+  .noticia{
+    
+    
+    margin: 0 5px;
+  }
+  
+  .descripcion{
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .boton{
+    color: #fff;
+    background: rgb(143, 134, 86);
+    border: solid 2px rgb(143, 134, 86);
+    border-radius: 30px;
+    padding: 5px;
+    width: 100px;
+    font-weight: 700;
+    
+  }
+  .boton:hover{
+    background: #fff;
+    color: #000;
+  }

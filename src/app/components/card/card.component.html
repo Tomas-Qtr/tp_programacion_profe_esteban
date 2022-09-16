@@ -8,15 +8,34 @@
             <p>{{cafe.descripcion}}</p>
         </p-card>
     </div>
-</div>  -->
-
-
+</div> 
+<div class=" grid-nogutter">
+    <p-carousel [value]="cafes" [numVisible]="4" [autoplayInterval]="3000"  [numScroll]="1" [circular]="true" [responsiveOptions]="responsiveOptions">
+        <ng-template let-cafe pTemplate="item">
+            <div class="col-3 p3">
+                <div class="carta">
+                    <img src="{{cafe.imagen}}" class="imagen" alt="">
+                    <div class="cafe">
+                        <p-rating [ngModel]="valor" [readonly]="true" [cancel]="false" style="float: left;font-size: 35px !important;color: #CAB700!important;"></p-rating>
+                    <h5>{{cafe.nombre}}</h5>
+                    <div class="fother_cafe">
+                        <button class="canasta pi pi-comment"></button>
+                        <p class="precio">$ {{cafe.precio}}</p>
+                    </div>
+                    </div>
+                </div>
+        
+            </div>    
+        </ng-template>
+    </p-carousel>
+</div>
+ -->
 <div class="grid grid-nogutter">
     <div class="col-3 p3" *ngFor="let cafe of cafes">
-        <div class="carta">
+        <div class="carta" >
             <img src="{{cafe.imagen}}" class="imagen" alt="">
             <div class="cafe">
-                
+                <p-rating [ngModel]="valor" [readonly]="true" [cancel]="false" style="float: left;font-size: 35px !important;color: #CAB700!important;"></p-rating>
             <h5>{{cafe.nombre}}</h5>
             <div class="fother_cafe">
                 <button class="canasta pi pi-comment"></button>
