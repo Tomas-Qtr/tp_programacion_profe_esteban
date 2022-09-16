@@ -30,6 +30,7 @@ export class CardComponent implements OnInit {
   ngOnInit(): void {
     this.servicioCafes.getCafe().subscribe(Colcafes=>{
       this.cafes = Colcafes;
+      console.log(Colcafes)
     })
   }
 /*

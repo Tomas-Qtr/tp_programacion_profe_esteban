@@ -1,15 +1,11 @@
-<div class="grid">
-    <div class="col">
-        <div class="carta">
-            <div class="noticia">
-                <h5></h5>
-                <div class="descripcion">
-                    <p>
-
-                    </p>
-                </div>
-            </div>
-        </div>
+<div class="grid grid-nogutter">
+    <div class="col-3 p-3" *ngFor="let noticia of news">
+        <p-card class=" m-2" header="{{noticia.titulo}}"
+            [style]="{width: '360px'}" styleClass="p-card-shadow">
+            <ng-template pTemplate="header">
+                <img alt="Card" src="{{noticia.imagen}}">
+            </ng-template>
+            <p>{{noticia.descripcion}}</p>
+        </p-card>
     </div>
-    <
-</div>
+</div> 

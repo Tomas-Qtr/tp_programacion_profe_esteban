@@ -14,8 +14,7 @@ export class CafesService {
 private colleccionCafes: AngularFirestoreCollection<Cafe>;
 
   getCafe(){
-    return this.colleccionCafes.stateChanges().
-    pipe(map(action=>action.map(a=>a.payload.doc.data())))
+    return this.colleccionCafes.snapshotChanges().pipe(map(action=>action.map(a=>a.payload.doc.data())))
   }
 
 

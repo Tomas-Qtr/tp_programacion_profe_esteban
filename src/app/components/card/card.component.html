@@ -1,17 +1,11 @@
-<p>hola mundo</p>
-
-
- 
-<!-- <div class="grid grid-nogutter">
-    <div class="col-4" *ngFor="let cafe of cafes">
+<div class="grid grid-nogutter">
+    <div class="col-3 p-3" *ngFor="let cafe of cafes">
         <p-card class=" m-2" header="{{cafe.nombre}}" subheader="$ {{cafe.precio}}"
             [style]="{width: '360px'}" styleClass="p-card-shadow">
             <ng-template pTemplate="header">
                 <img alt="Card" src="{{cafe.imagen}}">
             </ng-template>
             <p>{{cafe.descripcion}}</p>
-           <p-button (click)="mostrarEditar(cafe)">editar</p-button>
-            <p-button (click)="mostrarEliminar(cafe)">borrar</p-button> 
         </p-card>
     </div>
-</div> -->
+</div> 
