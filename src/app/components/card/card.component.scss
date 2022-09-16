@@ -3,6 +3,16 @@
     width: 100vw;
 }
 }
+
+.cuerpo{
+  display: flex;
+  flex-direction: column;
+}
+
+.estrellas{
+  display: flex;
+  justify-content: center;
+}
 .carta{
     width: 350px;
     padding: 8px 8px;
@@ -40,5 +50,16 @@
     font-weight: 900;
     font-size: 1.1em;
   }
+  :host ::ng-deep .pi-star:before {
+    content: "\e937";
+    color: rgb(117, 49, 4);
+}
+
+:host ::ng-deep .pi-star-fill:before {
+  content: "\e936";
+  color: rgb(177, 124, 11);
+}
+
+ 
 
 

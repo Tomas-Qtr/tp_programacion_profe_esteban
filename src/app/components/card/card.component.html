@@ -34,14 +34,21 @@
     <div class="col-3 p3" *ngFor="let cafe of cafes">
         <div class="carta" >
             <img src="{{cafe.imagen}}" class="imagen" alt="">
-            <div class="cafe">
-                <p-rating [ngModel]="valor" [readonly]="true" [cancel]="false" style="float: left;font-size: 35px !important;color: #CAB700!important;"></p-rating>
-            <h5>{{cafe.nombre}}</h5>
-            <div class="fother_cafe">
-                <button class="canasta pi pi-comment"></button>
-                <p class="precio">$ {{cafe.precio}}</p>
+            <div class="cuerpo">
+                <div class="estrellas">
+                    <p-rating [ngModel]="valor" [readonly]="false" [cancel]="false" style="float: left;font-size: 35px !important;color: #CAB700!important;"></p-rating>
+                </div>
+          
+                <div class="cafe">
+                   
+                    <h5>{{cafe.nombre}}</h5>
+                    <div class="fother_cafe">
+                        <button class="canasta pi pi-comment"></button>
+                        <p class="precio">$ {{cafe.precio}}</p>
+                    </div>
+                </div>
             </div>
-            </div>
+           
         </div>
 
     </div>    

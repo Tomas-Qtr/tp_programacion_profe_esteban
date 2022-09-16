@@ -1,1 +1,44 @@
+
 <p>admin-page works!</p>
+<h1 style="color: #CAB700;">hola mundo</h1>
+
+
+
+<p-button (click)="showPositionDialog('top')" icon="pi pi-arrow-down" label="Top" styleClass="p-button-warning"></p-button>
+<p-dialog header="Godfather I" [(visible)]="displayPosition" [position]="position" [modal]="true" [style]="{width: '50vw'}" [baseZIndex]="10000"
+    [draggable]="false" [resizable]="false">
+
+    <form [formGroup]="nuevoscafes">
+
+        <div class="formulario">
+            <span class="p-float-label" >
+                <input id="float-input" type="text" style="width: 35em;" pInputText formControlName="nombre"> 
+                <label for="float-input">Agregar Nombre del Cafe</label>
+            </span>
+        </div>
+        
+        <div class="formulario">
+            <span class="p-float-label" >
+                <input id="float-input" type="number" style="width: 35em;" pInputText formControlName="precio">  
+                <label for="float-input">Agregar precio al Cafe</label>
+            </span>
+        </div>
+    
+        <div class="formulario">
+            <span class="p-float-label" >
+                <input id="float-input" type="text" style="width: 35em;" pInputText formControlName="imagen"> 
+                <label for="float-input">Agregar URL de la imagen</label>
+            </span>
+        </div>
+    
+        <div class="formulario">
+            <span class="p-float-label" >
+                <input id="float-input" type="text" style="width: 35em;" pInputText formControlName="descripcion"> 
+                <label for="float-input">Agregar Descripcion del Cafe</label>
+            </span>
+        </div>
+    </form>
+    
+
+
+</p-dialog>
