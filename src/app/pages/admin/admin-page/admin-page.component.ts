@@ -38,7 +38,7 @@ export class AdminPageComponent implements OnInit {
       console.log(Colcafes)
     })
   }
-
+ //neudfdfdffbfb
   //Hacemos un metodo que agrega cafes y su datos a la base de datos y los muestra en cards
   /* agregarCafe(){
 
