@@ -12,6 +12,11 @@ import {TriStateCheckboxModule} from 'primeng/tristatecheckbox';
 import { ReactiveFormsModule} from '@angular/forms'
 import {CardModule} from 'primeng/card';
 
+//servicio Usuarios y firebase
+import { UsuariosService } from '../servicios/usuarios.service';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+
 @NgModule({
   declarations: [
     NavbarComponent,
@@ -24,11 +29,15 @@ import {CardModule} from 'primeng/card';
     DialogModule,
     TriStateCheckboxModule,
     ReactiveFormsModule,
-    CardModule
+    CardModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   exports: [
     NavbarComponent,
     FooterComponent
+  ],
+  providers:[
+    UsuariosService
   ]
 })
 export class SharedModule { }

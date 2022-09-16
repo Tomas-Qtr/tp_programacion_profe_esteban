@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { User } from 'src/app/models/user'; 
+import { UsuariosService } from 'src/app/servicios/usuarios.service';
 
 @Component({
   selector: 'app-navbar',
@@ -19,7 +20,9 @@ export class NavbarComponent implements OnInit {
 
   value: any;
 
-  constructor() { 
+  usuarios:User[];
+
+  constructor(private servicioUsuarios: UsuariosService) { 
     //Creamos la funcion que cambiara de color el navbar cuando se realice un scroll
     window.addEventListener("scroll", function(){
       var menubar:any = this.document.querySelector(".p-component");
@@ -31,47 +34,29 @@ export class NavbarComponent implements OnInit {
     this.items = [
       {
         label: 'Home',
-        icon:'pi pi-home'
+        icon:'pi pi-home',
+        routerLink: 'home'
       },
       {
         label: 'Contacto',
-        icon:'pi pi-user'
+        icon:'pi pi-user',
+        routerLink: 'contact',
       },
       {
         label: 'Admin',
         icon:'pi pi-phone',
-        visible: this.adminVisible
+        routerLink: 'admin'
       },
     ]
+
+    this.servicioUsuarios.getUsuarios().subscribe(callUser => {
+      this.usuarios = callUser;
+      console.log(callUser);
+    })
   }
 
   showPositionDialog(position: string) {
     this.position = position;
     this.displayPosition = true;
   } 
-
-
-  //Creamos el arreglo de usuarios y creamos algunos usuarios localmente 
-  usuarios: User[] = [
-    {
-      nombre:'admin',
-      apellido:'admin',
-      email:'admin@gmail.com',
-      contrasenia:'admin123'
-    },
-    {
-      nombre:'Juan',
-      apellido:'Paredes',
-      email:'juancito01@gmail.com',
-      contrasenia:'juan132'
-    },
-    {
-      nombre:'José',
-      apellido:'Castillos',
-      email:'castillito@gmail.com',
-      contrasenia:'casti@gmail.com'
-    }
-  ];
-
-  
 }

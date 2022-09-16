@@ -1,4 +1,4 @@
-<div class="grid grid-nogutter">
+<!-- <div class="grid grid-nogutter">
     <div class="col-3 p-3" *ngFor="let cafe of cafes">
         <p-card class=" m-2" header="{{cafe.nombre}}" subheader="$ {{cafe.precio}}"
             [style]="{width: '360px'}" styleClass="p-card-shadow">
@@ -8,4 +8,20 @@
             <p>{{cafe.descripcion}}</p>
         </p-card>
     </div>
-</div> 
+</div>  -->
+<div class="grid grid-nogutter">
+    <div class="col-3 p3" *ngFor="let cafe of cafes">
+        <div class="carta">
+            <img src="{{cafe.imagen}}" class="imagen" alt="">
+            <div class="cafe">
+            
+            <h5>{{cafe.nombre}}</h5>
+            <div class="fother_cafe">
+                <button class="canasta pi pi-comment"></button>
+                <p class="precio">$ {{cafe.precio}}</p>
+            </div>
+            </div>
+        </div>
+
+    </div>    
+</div>
